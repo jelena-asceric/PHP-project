@@ -11,6 +11,7 @@
             {% for location in locations %}
             <li>
                 <a href="{{ BASE }}admin/locations/edit/{{ location.location_id }}">
+                    {{location.name|escape}}
                 </a>
             {% endfor %}
         </ul>
