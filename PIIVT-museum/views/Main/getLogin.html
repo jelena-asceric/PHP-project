@@ -1,0 +1,32 @@
+{% extends "AdminDashboard/index.html" %}
+
+{% block main %}
+
+<div class="row">
+<form action="{{ BASE }}admin/login" method="POST" class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-lg-6 offset-xl-3">
+    <div class="card">
+    <div class="card-header">
+        Admin Registracija
+    </div>
+    <div class="card-body">
+    <div class="form-group">
+        <label for="input_username">Korisnicko ime:</label>
+       <input type = "text" id="input_username" name="login_username" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite korisnicko ime" >
+    </div>
+
+    <div form-group>
+        <label for="input_password">Lozinka:</label>
+        <input type = "password" id="input_password" name="login_password" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite lozinku." >  
+    </div>
+    </div>
+
+    <div class="card-footer">
+    <button type="submit" class="btn btn-primary">
+        Log in
+    </button>
+     </div>
+     </div>
+</form>
+</div>
+
+{% endblock %}

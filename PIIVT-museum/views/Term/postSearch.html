@@ -1,0 +1,26 @@
+
+{% extends "_global/index.html" %}
+
+{% block main %}
+<table class ="table table-sm" id="tabela2">
+    <thead>
+        <tr>
+            <th scope="col">Pocetak izlozbe</th>
+            <th scope="col">Kapacitet termina</th>
+            <th scope="col">Prikaz Izlozbe</th>
+        </tr>
+    </thead>
+      <tbody>
+            {% for term in terms %}
+    <tr>     
+            <td>{{term.start|date('d. m. Y. H.i', timezone="Europe/Belgrade")}}</td>
+            <td>{{term.cap}} </td>
+            <td>{{term.name}}</td>
+                    
+    </tr>
+                  {% endfor %}
+        </tbody>
+
+</table>
+ Rezultati pretrage
+{% endblock %}

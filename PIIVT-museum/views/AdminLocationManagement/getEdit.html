@@ -1,0 +1,24 @@
+{% extends "AdminDashboard/index.html" %}
+
+<!--44.snimak-->
+{% block main %}
+    <div>
+        <div class = "options">
+                <a href = "{{ BASE }}admin/locations"> Prikaz svih lokacija </a>
+            <a href = "{{ BASE }}admin/locations/add"> Dodaj novu lokaciju </a>
+        </div>    
+    
+     <form class = "location-form" method="POST">
+    <div>
+        <label for="name">Ime: </label>
+        <input type="text"  id="name" name="name" requierd value="{{ location.name|escape }}"  pattern=".*[^\s]{3,}.*">
+    </div>
+     <button type="submit" class="btn btn-success" >
+         Izmena lokaciju
+     </button>
+
+
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+{% spaceless %}
+   
+<h1>{{location.name|escape}}</h1>
+    <p>Spisak izlozbi u ovom gradu: </p> 
+    <ul>
+     {% for exhibition in exhibitionInLocation %}
+
+     <li>
+     <a href ="{{ BASE }}exhibition/{{exhibition.exhibition_id}}">
+              {{exhibition.name|escape}}<br>
+
+     </a>
+     
+     {% endfor %}
+    </ul>
+    
+
+    
+{% endspaceless %}
+{% endblock %}

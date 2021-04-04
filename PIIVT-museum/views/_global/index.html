@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Muzej</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ BASE }}assets/css/main.css">
+    <link rel="stylesheet" href="{{ BASE }}assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ BASE }}assets/libs/font-awesome/css/font-awesome.min.css">
+   </head>
+   <body>
+        <div class="container">
+   <header>
+        <div class="row">
+              <div class="col col-sm">
+                <a href="{{ BASE }}" class="banner" >
+                    <img src="{{ BASE }}assets/img/banner-2.png" alt="Banner1">
+                     
+                </a>
+
+            
+                  </div>    
+                    
+                    <!-- ikonice za socijalne mreze 50. da li mora fab-->
+         <div class="col col-sm">
+                      <div class=" social-icons text-right">
+                         <a href="#"><i class="fa fa-linkedin"></i></a>
+                         <a href="#"><i class="fa fa-facebook-official"></i></a>
+                         <a href="#"><i class="fa fa-twitter"></i></a>
+                         <a href="#"><i class="fa fa-youtube"></i></a>
+                         
+                     </div>
+                    
+                     <div class="search-box">
+                            <form method="post" action="{{ BASE }}search">
+                            <div class="form-group">
+                                <div class="input-group">
+                                <!-- q(uokviri)-->  
+                                  <input type="text" name="q" class="form-control" placeholder="kljucne reci pretrage" required pattern="[^\s]{2,}">
+                                  <button type="submit" class="btn btn-primary input-group-append "><!--plave boje i dodaje se input bloki-->
+                                   <!--ikonica za pretragu--> <i class="fa fa-search"></i> <!--pretraga-->
+                                </button>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+             </div>
+        </div>
+           
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><!---->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <div class="navbar-nav">
+                      <a class=" nav-item nav-link " href="{{ BASE }}"><i class="fa fa-home"></i>Pocetna</a>
+                      <a class=" nav-item nav-link " href="{{ BASE }}exhibitions/"><i class="fa fa-list"></i>Spisak izlozbi</a>
+                      <a class=" nav-item nav-link " href="{{ BASE }}terms/">Spisak termina</a>
+                      <a class=" nav-item nav-link " href="{{ BASE }}contact/store_locator/"><i class="fa fa-phone"></i>Kontakt</a>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+
+
+       <main>
+           {% block main %}
+           {% endblock %}
+       </main>
+
+       
+       <div class="card bookmark-card col-4" >
+        <div class = "bookmarks card-body">
+            Loading bookmarks...
+        </div>
+       </div>
+
+       <footer class="site-footer text-center">
+           &copy; 2019 Museum <a href="#">A&amp;M</a>
+       </footer>
+       
+       </div>
+
+       <script>const BASE = '{{ BASE }}';</script>
+       <script src="{{ BASE }}assets/libs/jquey/dist/jquery.min.js"></script>
+       <script src="{{BASE}}assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+       <script src="{{ BASE }}assets/js/bookmark.js"></script>
+
+
+   </body>
+
+</html>

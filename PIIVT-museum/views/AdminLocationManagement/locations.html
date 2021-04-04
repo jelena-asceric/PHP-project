@@ -1,0 +1,22 @@
+{% extends "AdminDashboard/index.html" %}
+
+{% block main %}
+    <div>
+        <div class = "options">
+            <a href = "{{ BASE }}admin/locations/add"> Dodaj novu lokaciju</a>
+        </div>    
+    
+     <div class = "locations">
+        <ul>
+            {% for location in locations %}
+            <li>
+                <a href="{{ BASE }}admin/locations/edit/{{ location.location_id }}">
+                </a>
+            {% endfor %}
+        </ul>
+
+     </div>
+    
+    </div>
+
+{% endblock %}

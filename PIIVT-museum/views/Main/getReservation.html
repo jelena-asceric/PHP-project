@@ -1,0 +1,59 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+<div class="row">
+<form action="{{ BASE }}user/reservation" method="POST"  class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-lg-6 offset-xl-3">
+   <div class="card">
+    <div class="card-header">
+        Rezervacija
+    </div>
+    <div class="card-body">
+    <input type="hidden" name="term_id" value="{{ DATA['term_id'] }}">
+
+    <div class="form-group">
+        <label for="input_name">Ime:</label>
+        <input type="text" id="input_name" name="res_name" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite vase ime" pattern="[a-zA-Z]{2,64}">
+    </div>
+    <div class="form-group">
+        <label for="input_surname">Prezime:</label>
+        <input type="text" id="input_surname" name="res_surname" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite vase prezime" pattern="[a-zA-Z]{2,64}">
+    </div>
+    <div class="form-group">
+        <label for="input_email">E-mail:</label>
+        <input type="email" id="input_email" name="res_email" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite vasu email adresu" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+    </div>
+    <div class="form-group">
+        <label for="input_phone">Telefon:</label>
+        <input type="text" id="input_phone" name="res_phone" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite vas telefon" pattern="[0-9 ]{2,64}">
+    </div>
+    <div class="form-group">
+        <label for="input_address">Adresa:</label>
+        <input type="text" id="input_address" name="res_address" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite vasu adresu">
+    </div>
+    <div class="form-group">
+        <label for="input_visitors">Broj posetilaca:</label>
+        <input type="text" id="input_visitors" name="res_visitors" class="form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Unesite broj posetilaca" pattern="[0-9]{2}">
+    </div>
+    <div class="form-group">
+        <select name="language_id" class="custom-select mr-sm-2">
+            {% for language in languages %}
+                <option value="{{ language.language_id }}">{{ language.name }}</option>
+            {% endfor %}
+
+          </select>
+    </div>
+   </div>
+  
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">
+         Rezervacija
+        </button>
+    </div>
+    </div>
+
+
+
+</div>
+</form>
+</div>>
+{% endblock %}

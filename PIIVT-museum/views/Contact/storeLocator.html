@@ -1,0 +1,28 @@
+{% extends "_global/index.html" %} 
+{% block main %}
+
+<!-- <!DOCTYPE html>
+
+ <html>
+<head>
+<title>map test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body> -->
+
+<!-- this div will hold your map -->
+<div class="container" text-align="center">
+    <h1>Prikaz lokacije muzeja</h1>
+    <div class="col-lg-17">
+        <div id="map"></div>
+        <div id="info_div"></div>
+    </div>
+    <!-- <script src="{{ BASE }}assets/js/maps.js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1buLe1OKG_0iwHessLPCqqNmAPHN9w8&callback=initMap"
+    async defer></script>
+</div>
+
+<!-- </html> -->
+{% endblock %}

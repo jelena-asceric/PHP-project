@@ -1,0 +1,168 @@
+/*.main-menu {
+    margin-bottom: 20px;
+}*/
+
+.social-icons {
+     margin-bottom:10px;
+     
+
+}
+
+.social-icons a i.fa{
+    color:orange;
+    font-size: 18pt;
+    display: inline;
+    margin: 5px;
+    
+}
+
+.location {
+    padding: 30px 0px;
+    margin-top: 15px;
+}
+
+.card{
+    margin-top: 15px;
+}
+
+.bookmark-card{
+    margin: 10px 0px;
+
+}
+
+.width-100-percent{
+    width: 100%;
+}
+
+.banner > img {
+    width: 180px;
+    height: auto;
+}
+
+.width-100-percent{
+    width: 100%;
+}
+
+.reservation{
+    width: 100%;
+    color:blue;
+}
+#tabela{
+   background-color: #f2f3f7;
+}
+
+
+/** {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.locations {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: wrap;
+
+}
+
+.location {
+    width: 50%;
+    text-align: center;
+    padding: 50px 100px;
+    border: 1px solid #ccc;
+    background: rgba(200, 200, 200, 0.2);
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    
+    margin: 0 auto;
+    width: 900px;
+}
+
+.site-header {
+    display: grid;
+    grid-template-areas: "banner social"
+                         "banner search"
+                          "menu menu " ;
+}
+
+.banners {
+    grid-area: banner;
+    background-color: chocolate;
+
+}
+
+
+       
+
+#main-menu {
+        grid-area: menu;
+       
+    }    
+
+#main-menu > ul {
+       
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        align-content: stretch;
+}
+
+#main-menu > ul > li {
+        text-align: center;
+        flex-grow: 1;
+        
+    }
+
+#main-menu > ul > li:hover {
+        background: rgba(200, 200, 200, 0.3);
+    }
+
+#main-menu > ul > li > a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 0px;
+        color: #000;
+    }
+
+.exhibitions {
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        flex-wrap: wrap;
+    
+    }
+
+
+
+.exhibition:hover {
+        border: 1px solid #000;
+        background: rgba(200, 200, 200, 0.6);
+    
+    }
+
+.site-footer {
+        margin-top: 40px;
+        text-align: center;
+    
+    }
+
+
+/*ovo je sve bilo vezano zarasporedjivanje elemenata
+
+.bookmarks {
+    position: fixed;
+    display: block;
+    top: 50px;
+    right: 0px;
+    border: 1px solid #000;
+    background: #fefefe;
+
+}
+
+*/

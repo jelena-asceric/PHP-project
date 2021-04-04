@@ -1,0 +1,15 @@
+{% extends "AdminDashboard/index.html" %} 
+{% block main %}
+
+<p class="h2 text-muted">Prikaz termina</p>
+<ul class="list-group col-4">
+            {% for term in terms %}
+            <li class="list-group-item">
+            <a href = "{{ BASE }}admin/reservation/{{ term.term_id }}">
+                
+                {{term.starts_at|date('d. m. Y. H.i', timezone="Europe/Belgrade")}}
+            </a>
+           
+            {% endfor %}
+        </ul>
+{% endblock %}

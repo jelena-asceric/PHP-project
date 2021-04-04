@@ -1,0 +1,16 @@
+{% extends "_global/index.html" %} 
+{% block main %}
+
+<p class="h2 text-muted">IZLOZBE</p>
+
+    <ul class="list-group col-4">
+     {% for exhibition in exhibitions %}
+    <li class="list-group-item">
+        <a href = "{{ BASE }}exhibition/{{ exhibition.exhibition_id }}">
+            {{exhibition.name|escape}}
+        </a>
+        {% endfor %}
+    </li>
+    
+    </ul>
+    {% endblock %}

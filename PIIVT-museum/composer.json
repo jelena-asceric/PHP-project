@@ -1,0 +1,21 @@
+{
+    "name": "asceric/test-app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jelena",
+            "email": "asceric14@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.11"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": ""
+        }
+    }
+}

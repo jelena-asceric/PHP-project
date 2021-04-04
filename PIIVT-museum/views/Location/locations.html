@@ -1,0 +1,17 @@
+{% extends "_global/index.html" %} 
+{% block main %}
+
+<p class="h2 text-muted">LOKACIJE</p>
+
+<ul class="list-group col-4">
+        {% for location in locations %}
+    <li class= "list-group-item">
+        <a href = "{{ BASE }}location/{{ location.location_id }}">
+            {{location.name|escape}}
+        </a>
+        {% endfor %}
+    </li>
+    
+    </ul>
+
+    {% endblock %}

@@ -1,0 +1,74 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+<ul>
+{% spaceless %}
+
+<table class ="table table-sm" id="tabela2">
+        <thead>
+        <tr>
+            <th scope="col">Pocetak izlozbe</th>
+            <th scope="col">Kapacitet termina</th>
+            <th scope="col">Trenutno slobodnih mesta</th>
+            <th scope="col">Rezervacija</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    {% for term in termInExhibition %}
+
+    <a href ="/term/{{term.term_id}}"></a>
+                
+    
+    <tr>     
+            <td>{{term.start|date('d. m. Y. H.i', timezone="Europe/Belgrade")}}</td>
+            <td>{{term.cap}} </td>
+            <td>{{term.free_space}}</td>
+            <td>
+                
+                <form action = "{{ BASE }}user/reservation" method="POST">
+                    <input type="hidden" name="term_id" value="{{term.term_id}}">
+                  {% if term.free_space ==0 %}
+                    <input disabled type="submit" class="btn btn-success" name="rezervation" value="sve popunjeno">
+                  {% else %}
+                  <input type="submit" class="btn btn-success" name="rezervation" value="rezervisi">
+                {% endif %}
+               
+
+                
+               </form> 
+
+            </td>                
+    
+    
+    </tr>
+
+    {% endfor %} <br>
+</tbody>
+</table>
+
+
+<div class="row">  
+    <h1>{{ exhibition.name|escape}}</h1>
+</div>
+    {% for image in imageInExhibition %}
+    <li class="exhibition row">
+        
+        <div class="col-12 col-md-2">      
+            <img src="{{ BASE }}assets/img/{{image.url}}" alt="slika" class="width-100-percent">
+        </div>
+
+        <div class="row">
+            <span class="col-6 col-md-12">{{image.name}}</span>
+        </div>
+    </li>
+    {% endfor %}
+
+</ul>
+<!-- <a href="#" onclick="addBookmark({{ exhibition.exhibition_id }});">Add to bookmark</a> -->
+   
+    
+
+  
+{% endspaceless %}
+{% endblock %}

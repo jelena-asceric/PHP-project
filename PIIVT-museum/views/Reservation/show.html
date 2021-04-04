@@ -1,0 +1,41 @@
+{% extends "AdminDashboard/index.html" %}
+
+{% block main %}
+
+
+
+<p>Trenutni kapacitet termina: {{ freeSpaceTerm }}</p>
+
+
+<table class="table table-sm" id="tabela">
+    <thead>
+        <tr>
+        
+            <th scope="col">Ime</th>
+            <th scope="col">Prezme</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">Adresa</th>
+            <th scope="col">Jezik</th>
+            <th scope="col">Broj posetilaca</th>
+        </tr>
+    </thead>
+    <tbody>
+            {% for user in usersInReservation %}
+        <tr>     
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.address }}</td>
+          <td>{{ user.lname }}</td>
+          <td>{{ user.visitors }}</td>
+          
+        </tr>
+        {% endfor %}
+    </tbody>
+         
+   
+</table>
+  
+    {% endblock %}
